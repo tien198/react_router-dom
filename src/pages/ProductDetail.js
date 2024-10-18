@@ -4,7 +4,6 @@ import { useParams } from 'react-router-dom';
 function ProductDetail(props) {
     const {
         productId = '',
-        categoryId = ''
     } = useParams()
     return (
         <>
