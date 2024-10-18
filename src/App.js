@@ -3,6 +3,7 @@ import Home from './pages/Home';
 import Products from './pages/Products';
 import RootLayout from './pages/RootLayout';
 import Error from './pages/Error';
+import ProductDetail from './pages/ProductDetail';
 
 
 // const routerDefinition = createRoutesFromElements(
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: '/products',
         element: <Products />
+      },
+      {
+        path: '/products/:productId/',
+        element: <ProductDetail />
       }
     ]
   },

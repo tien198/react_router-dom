@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 import styles from './MainNavigation.module.css'
 
@@ -14,7 +14,10 @@ function MainNavigation(props) {
                 <ul className={styles['list']}>
                     {urlList.map((u, i) => (
                         <li key={i}>
-                            <Link to={u.url}>{u.linkName}</Link>
+                            <NavLink to={u.url}
+                                className={({ isActive }) => isActive ? styles['active'] : undefined} >
+                                {u.linkName}
+                            </NavLink>
                         </li>))}
                 </ul>
             </nav>
